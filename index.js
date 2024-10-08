@@ -5,7 +5,7 @@ const RegisterModel = require('./models/Register')
 
 const app = express()
 const corsOptions = {
-    origin: ["https://xyz-delta-eight.vercel.app", "http://127.0.0.1:5173"],
+    origin: ["https://test-frontend-ebon.vercel.app", "http://127.0.0.1:5173"],
     methods: ["POST", "GET", "OPTIONS"],
     credentials: true
 };
