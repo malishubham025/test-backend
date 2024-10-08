@@ -4,11 +4,16 @@ const cors = require('cors')
 const RegisterModel = require('./models/Register')
 
 const app = express()
-app.use(cors({
+const corsOptions = {
     origin: ["https://xyz-delta-eight.vercel.app", "http://127.0.0.1:5173"],
     methods: ["POST", "GET", "OPTIONS"],
     credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
+
+// Handle preflight OPTIONS requests
+app.options("*", cors(corsOptions));
 
 app.use(express.json())
 
